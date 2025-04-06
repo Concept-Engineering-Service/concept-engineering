@@ -3340,7 +3340,7 @@ hr {
 }
 
 .services-area .single-services::before {
-    background-image: url(/assets/img//service/services_bg.png);
+    background-image: url(/assets/img/service/services_bg.png);
     content: "";
     position: absolute;
     min-width: 221px;
