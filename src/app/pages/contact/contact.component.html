@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+
+<section class="bg-gradient-to-br from-[#072c53] via-blue-900 to-[#0d2d59] text-white text-center py-20 px-6 md:px-16">
+    <h1 class="text-4xl font-bold mb-4">Let's Connect</h1>
+    <p class="max-w-2xl mx-auto text-lg text-blue-100">
+        Whether you’re a client with a project in mind, a brand looking to collaborate, or simply have a question —
+        we're here to help.
+    </p>
+</section>
+
+<!-- Contact Type Selector -->
+<section class="py-10 px-6 md:px-16 bg-gray-50 text-center">
+    <h2 class="text-2xl font-bold text-[#072c53] mb-4">How can we help you?</h2>
+    <div class="flex flex-wrap gap-4 justify-center">
+        <!-- Project -->
+        <button (click)="contactType = 'project'" class="px-6 py-2 rounded font-medium border transition" [ngClass]="{
+            'bg-[#ff6c6c] text-white border-[#ff6c6c]': contactType === 'project',
+            'bg-white text-[#072c53] border-[#072c53] hover:bg-[#072c53] hover:text-white': contactType !== 'project'
+          }">
+            I have a project
+        </button>
+
+        <!-- Partnership -->
+        <button (click)="contactType = 'partnership'" class="px-6 py-2 rounded font-medium border transition" [ngClass]="{
+            'bg-[#ff6c6c] text-white border-[#ff6c6c]': contactType === 'partnership',
+            'bg-white text-[#072c53] border-[#072c53] hover:bg-[#072c53] hover:text-white': contactType !== 'partnership'
+          }">
+            I'm a potential partner
+        </button>
+
+        <!-- General -->
+        <button (click)="contactType = 'general'" class="px-6 py-2 rounded font-medium border transition" [ngClass]="{
+            'bg-[#ff6c6c] text-white border-[#ff6c6c]': contactType === 'general',
+            'bg-white text-[#072c53] border-[#072c53] hover:bg-[#072c53] hover:text-white': contactType !== 'general'
+          }">
+            Just want to message
+        </button>
+    </div>
+
+</section>
+
+
+<section class="py-16 px-6 md:px-16 bg-white" id="contact-form">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+        <form (ngSubmit)="onSubmit()" class="space-y-4">
+
+            <!-- Common Fields -->
+            <input [(ngModel)]="name" name="name" required placeholder="Your Name"
+                class="w-full px-4 py-3 border rounded" />
+            <input [(ngModel)]="email" name="email" required type="email" placeholder="Your Email"
+                class="w-full px-4 py-3 border rounded" />
+
+            <!-- Project Inquiry -->
+            <div *ngIf="contactType === 'project'" class="space-y-4">
+                <input [(ngModel)]="projectType" name="projectType" placeholder="Project Type (e.g. HVAC, Web Dev)"
+                    class="w-full px-4 py-3 border rounded" />
+                <input [(ngModel)]="budget" name="budget" placeholder="Estimated Budget"
+                    class="w-full px-4 py-3 border rounded" />
+            </div>
+
+            <!-- Partnership Inquiry -->
+            <div *ngIf="contactType === 'partnership'" class="space-y-4">
+                <input [(ngModel)]="companyName" name="companyName" placeholder="Company Name"
+                    class="w-full px-4 py-3 border rounded" />
+                <input [(ngModel)]="servicesOffered" name="servicesOffered" placeholder="Your Services / Expertise"
+                    class="w-full px-4 py-3 border rounded" />
+            </div>
+
+            <!-- Message Field (Always shown) -->
+            <textarea [(ngModel)]="message" name="message" required rows="5" placeholder="Your Message"
+                class="w-full px-4 py-3 border rounded"></textarea>
+
+            <button type="submit"
+                class="bg-[#072c53] hover:bg-[#0d2d59] text-white px-6 py-2 rounded font-semibold shadow">
+                Send Message
+            </button>
+        </form>
+
+
+        <!-- Contact Info -->
+        <div>
+            <h3 class="text-xl font-semibold text-[#072c53] mb-4">Get in Touch</h3>
+            <p class="text-gray-700 mb-2">📍 Srinagar, Jammu & Kashmir</p>
+            <p class="text-gray-700 mb-2">📧 contact&#64;conceptengineering.com</p>
+            <p class="text-gray-700 mb-6">📞 +91-XXXXXXXXXX</p>
+
+            <h4 class="text-md font-semibold text-[#072c53] mb-2">Office Hours</h4>
+            <p class="text-gray-600">Mon–Sat: 9:00 AM – 6:00 PM</p>
+        </div>
+    </div>
+</section>
+
+
+<app-footer></app-footer>
