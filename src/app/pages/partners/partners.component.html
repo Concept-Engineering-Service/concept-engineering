@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+
+<section class="bg-gradient-to-br from-[#072c53] via-blue-900 to-[#0d2d59] text-white text-center py-20 px-6 md:px-16">
+    <h1 class="text-4xl font-bold mb-4">Our Channel Partners</h1>
+    <p class="max-w-3xl mx-auto text-lg text-blue-100">
+        Our trusted partnerships help us deliver the highest standard of engineering, design, and digital excellence
+        across all our projects.
+    </p>
+</section>
+
+<section class="py-20 px-6 md:px-16 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <ng-container *ngFor="let group of getPartnerGroups()">
+
+            <div class="flex items-center gap-2 mb-2 text-[#072c53] mb-6 mt-12 border-b border-gray-200 pb-2">
+                <lucide-icon [name]="iconMap[group.category]" class="w-6 h-6"></lucide-icon>
+                <h2 class="text-2xl font-bold">{{ group.category }} Partners</h2>
+            </div>
+
+            <p class="text-gray-700 text-base mb-6 text-left max-w-4xl mx-auto leading-relaxed">
+                {{ categoryDescriptions[group.category] }}
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div *ngFor="let partner of group.items"
+                    class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+                    <a [href]="partner.url" target="_blank" rel="noopener noreferrer">
+                        <img [src]="partner.logo" [alt]="partner.name"
+                            class="h-20 w-32 mx-auto mb-4 object-contain object-center aspect-[2/1]" />
+                    </a>
+                    <h3 class="text-xl font-semibold text-[#072c53] mb-2">{{ partner.name }}</h3>
+                    <p class="text-gray-600 text-sm mb-2">{{ partner.description }}</p>
+                    <p class="text-xs text-gray-500">Partnered since {{ partner.trustedSince }}</p>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</section>
+
+
+<app-footer></app-footer>

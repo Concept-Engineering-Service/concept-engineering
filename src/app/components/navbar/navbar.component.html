@@ -14,6 +14,11 @@
                 class="hover:text-[#ff6c6c] transition-colors">
                 About
             </a>
+            
+            <a (click)="navigateTo('/partners')" routerLink="/partners" routerLinkActive="active-link"
+                class="hover:text-[#ff6c6c] transition-colors">
+                Partners
+            </a>
 
             <a routerLink="/services" routerLinkActive="active-link" class="hover:text-[#ff6c6c] transition-colors">
                 Services
@@ -50,6 +55,10 @@
         <a (click)="navigateTo('/about')" routerLink="/about" routerLinkActive="active-link"
             class="block text-white hover:text-red-400">
             About
+        </a>
+        <a (click)="navigateTo('/partners')" routerLink="/partners" routerLinkActive="active-link"
+            class="block text-white hover:text-red-400">
+            Partners
         </a>
         <a (click)="navigateTo('/services')" routerLink="/services" routerLinkActive="active-link"
             class="block text-white hover:text-red-400">
