@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
+import { Component, HostListener } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, HomeComponent, FooterComponent],
+  standalone: true,
+  imports: [RouterModule, NgClass],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'concept-engineering';
+  showScrollTop = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.showScrollTop = window.scrollY > 300;
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

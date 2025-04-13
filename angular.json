@@ -5,7 +5,11 @@
   "projects": {
     "concept-engineering": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -20,46 +24,17 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
-              "src/assets/css/bootstrap.min.css",
-              "src/assets/css/owl.carousel.min.css",
-              "src/assets/css/flaticon.css",
-              "src/assets/css/slicknav.css",
-              "src/assets/css/animate.min.css",
-              "src/assets/css/magnific-popup.css",
-              "src/assets/css/fontawesome-all.min.css",
-              "src/assets/css/themify-icons.css",
-              "src/assets/css/slick.css",
-              "src/assets/css/nice-select.css",
-              "src/assets/css/style.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "src/assets/js/vendor/modernizr-3.5.0.min.js",
-              "src/assets/js/vendor/jquery-1.12.4.min.js",
-              "src/assets/js/popper.min.js",
-              "src/assets/js/bootstrap.min.js",
-              "src/assets/js/jquery.slicknav.min.js",
-              "src/assets/js/owl.carousel.min.js",
-              "src/assets/js/slick.min.js",
-              "src/assets/js/gijgo.min.js",
-              "src/assets/js/wow.min.js",
-              "src/assets/js/animated.headline.js",
-              "src/assets/js/jquery.magnific-popup.js",
-              "src/assets/js/jquery.scrollUp.min.js",
-              "src/assets/js/jquery.nice-select.min.js",
-              "src/assets/js/jquery.sticky.js",
-              "src/assets/js/contact.js",
-              "src/assets/js/jquery.form.js",
-              "src/assets/js/jquery.validate.min.js",
-              "src/assets/js/mail-script.js",
-              "src/assets/js/jquery.ajaxchimp.min.js",
-              "src/assets/js/plugins.js",
-              "src/assets/js/main.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -67,7 +42,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kB",
-                  "maximumError": "2MB"
+                  "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -108,52 +83,23 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
-              "src/assets/css/bootstrap.min.css",
-              "src/assets/css/owl.carousel.min.css",
-              "src/assets/css/flaticon.css",
-              "src/assets/css/slicknav.css",
-              "src/assets/css/animate.min.css",
-              "src/assets/css/magnific-popup.css",
-              "src/assets/css/fontawesome-all.min.css",
-              "src/assets/css/themify-icons.css",
-              "src/assets/css/slick.css",
-              "src/assets/css/nice-select.css",
-              "src/assets/css/style.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "src/assets/js/vendor/modernizr-3.5.0.min.js",
-              "src/assets/js/vendor/jquery-1.12.4.min.js",
-              "src/assets/js/popper.min.js",
-              "src/assets/js/bootstrap.min.js",
-              "src/assets/js/jquery.slicknav.min.js",
-              "src/assets/js/owl.carousel.min.js",
-              "src/assets/js/slick.min.js",
-              "src/assets/js/gijgo.min.js",
-              "src/assets/js/wow.min.js",
-              "src/assets/js/animated.headline.js",
-              "src/assets/js/jquery.magnific-popup.js",
-              "src/assets/js/jquery.scrollUp.min.js",
-              "src/assets/js/jquery.nice-select.min.js",
-              "src/assets/js/jquery.sticky.js",
-              "src/assets/js/contact.js",
-              "src/assets/js/jquery.form.js",
-              "src/assets/js/jquery.validate.min.js",
-              "src/assets/js/mail-script.js",
-              "src/assets/js/jquery.ajaxchimp.min.js",
-              "src/assets/js/plugins.js",
-              "src/assets/js/main.js"
-            ]
+            "scripts": []
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "1222f27b-3676-496b-bab6-ac9609efad89"
+    "analytics": "9b3b2678-6ee9-4ab4-9c1b-a622213c6b43"
   }
 }

@@ -1,0 +1,103 @@
+<div class="min-h-screen bg-white text-gray-800">
+    <!-- Header -->
+    <app-navbar></app-navbar>
+
+    <!-- Hero Section -->
+    <section
+        class="relative bg-gradient-to-br from-[#072c53] via-blue-900 to-[#0d2d59] text-white py-20 px-6 md:px-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+            <!-- Left Text -->
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4">
+                    Engineering Excellence <br>
+                    Built for the Future
+                </h1>
+                <p class="text-lg text-blue-100 mb-6">
+                    From innovative architecture to precision HVAC and IT systems — we design, build, and empower your
+                    spaces with cutting-edge engineering services.
+                </p>
+                <a href="#services"
+                    class="inline-block bg-[#ff6c6c] hover:bg-[#ff4c4c] px-6 py-2 rounded text-white font-semibold shadow">
+                    Explore Services
+                </a>
+            </div>
+
+            <!-- Right Hero Image -->
+            <div class="md:w-1/2">
+                <img src="assets/hero-img.webp" alt="Concept Engineering Service"
+                    class="rounded-lg shadow-xl w-full max-w-lg mx-auto">
+            </div>
+        </div>
+
+        <!-- Subtle Background Overlay -->
+        <div class="absolute -top-20 -right-40 w-[500px] h-[500px] bg-blue-600 opacity-10 rounded-full blur-3xl z-0">
+        </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section class="px-6 md:px-16 py-20 bg-[#f0f4fa] text-center">
+        <h2 class="text-4xl font-bold text-[#072c53] mb-6">Who We Are</h2>
+        <p class="text-gray-700 max-w-3xl mx-auto text-lg">
+            Concept Engineering Service is a multidisciplinary engineering firm based in Srinagar, Jammu and Kashmir.
+            We are committed to delivering high-quality, reliable, and customized engineering and IT solutions for
+            clients across sectors. From concept to execution, our experienced team is here to transform your
+            infrastructure and digital needs into scalable reality.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-white px-6 md:px-16 py-24">
+        <div class="text-center mb-14">
+            <h2 class="text-4xl font-bold text-[#072c53]">Our Services</h2>
+            <p class="text-gray-600 mt-3 text-lg">End-to-end services tailored for performance, comfort, and efficiency
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="bg-[#f0f4fa] p-6 rounded-xl shadow hover:shadow-lg transition hover:scale-[1.03] duration-200">
+                <lucide-icon [img]="WrenchIcon" class="w-10 h-10 text-[#072c53] mb-4"></lucide-icon>
+                <h3 class="text-xl font-semibold text-[#072c53] mb-2">HVAC Installation</h3>
+                <p class="text-gray-700">
+                    Expert installation of heating, ventilation, and air conditioning systems for both residential and
+                    commercial spaces.
+                </p>
+            </div>
+
+            <div class="bg-[#f0f4fa] p-6 rounded-xl shadow hover:shadow-lg transition hover:scale-[1.03] duration-200">
+                <lucide-icon [img]="Layers3Icon" class="w-10 h-10 text-[#072c53] mb-4"></lucide-icon>
+                <h3 class="text-xl font-semibold text-[#072c53] mb-2">Lift & Elevators</h3>
+                <p class="text-gray-700">
+                    Design, installation, and maintenance of passenger and freight lifts — safe, efficient, and modern.
+                </p>
+            </div>
+
+            <div class="bg-[#f0f4fa] p-6 rounded-xl shadow hover:shadow-lg transition hover:scale-[1.03] duration-200">
+                <lucide-icon [img]="CpuIcon" class="w-10 h-10 text-[#072c53] mb-4"></lucide-icon>
+                <h3 class="text-xl font-semibold text-[#072c53] mb-2">Precision Air Conditioning</h3>
+                <p class="text-gray-700">
+                    Cooling solutions for data centers, clean rooms, and labs — with precision, reliability, and energy
+                    efficiency.
+                </p>
+            </div>
+
+            <div class="bg-[#f0f4fa] p-6 rounded-xl shadow hover:shadow-lg transition hover:scale-[1.03] duration-200">
+                <lucide-icon [img]="LayoutIcon" class="w-10 h-10 text-[#072c53] mb-4"></lucide-icon>
+                <h3 class="text-xl font-semibold text-[#072c53] mb-2">IT & Web Development</h3>
+                <p class="text-gray-700">
+                    Website development, e-commerce solutions, and custom software tailored for your digital success.
+                </p>
+            </div>
+
+            <div class="bg-[#f0f4fa] p-6 rounded-xl shadow hover:shadow-lg transition hover:scale-[1.03] duration-200">
+                <lucide-icon [img]="HomeIcon" class="w-10 h-10 text-[#072c53] mb-4"></lucide-icon>
+                <h3 class="text-xl font-semibold text-[#072c53] mb-2">Architecture Services</h3>
+                <p class="text-gray-700">
+                    Comprehensive architectural solutions: design, interiors, and project management under one roof.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<app-footer></app-footer>
