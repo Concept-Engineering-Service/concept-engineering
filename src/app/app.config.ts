@@ -1,14 +1,11 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
+import { provideRouter} from '@angular/router';
+import { routes as appRoutes } from './app.routes';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: '**', redirectTo: '' }
-];
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes)
+    provideRouter(appRoutes)
   ]
 };
+
