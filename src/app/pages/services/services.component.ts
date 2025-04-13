@@ -41,7 +41,7 @@ export class ServicesComponent {
         Our engineers focus on climate efficiency, low operational costs, and future-ready solutions — customized to the scale and needs of every project.
       `,
       benefits: [
-        'Energy-efficient heating and cooling',
+        'Energy-efficient heating and cooling solutions',
         'Tailored ducting and zoning systems',
         'Post-installation testing and maintenance support'
       ],
@@ -90,7 +90,7 @@ export class ServicesComponent {
       color: 'bg-gray-50'
     },
     {
-      title: 'Architecture Services',
+      title: 'Architectural and Consultancy Services',
       icon: this.HomeIcon,
       description: `
         Our architectural team designs thoughtful, functional spaces — from homes to commercial complexes.

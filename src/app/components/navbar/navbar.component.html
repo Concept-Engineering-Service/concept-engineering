@@ -1,7 +1,7 @@
 <div class="sticky top-0 z-50">
 
     <header class="bg-[#072c53] text-white px-6 py-4 flex items-center justify-between">
-        <div class="text-xl font-bold tracking-wider">Concept Engineering</div>
+        <div class="text-xl font-bold tracking-wider">Concept Engineering Service</div>
 
         <!-- Desktop Nav -->
         <nav class="hidden md:flex space-x-6">
@@ -33,7 +33,7 @@
 
         <!-- Contact Button -->
         <div class="hidden md:block">
-            <button class="bg-[#ff6c6c] hover:bg-[#ff4c4c] px-4 py-2 rounded text-sm font-semibold">Contact Now</button>
+            <button (click)="navigateTo('/contact')" class="bg-[#ff6c6c] hover:bg-[#ff4c4c] px-4 py-2 rounded text-sm font-semibold">Contact Now</button>
         </div>
 
         <!-- Hamburger Icon (Mobile) -->
@@ -69,7 +69,7 @@
             class="block text-white hover:text-red-400">
             Contact Us
         </a>
-        <button class="w-full mt-2 bg-[#ff6c6c] hover:bg-[#ff4c4c] px-4 py-2 rounded text-sm font-semibold">
+        <button (click)="navigateTo('/contact')" class="w-full mt-2 bg-[#ff6c6c] hover:bg-[#ff4c4c] px-4 py-2 rounded text-sm font-semibold">
             Contact Now
         </button>
     </div>

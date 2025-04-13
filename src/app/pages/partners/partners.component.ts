@@ -32,7 +32,7 @@ export class PartnersComponent {
       url: 'https://www.careco.co.in',
       description: 'HVAC and refrigeration specialists known for eco-conscious climate control solutions.',
       category: 'HVAC',
-      trustedSince: 2020
+      trustedSince: 2023
     },
     {
       name: 'Hisense HVAC',
@@ -40,7 +40,7 @@ export class PartnersComponent {
       url: 'http://www.hisensehvac.com',
       description: 'Leading provider of advanced air conditioning and HVAC systems across the globe.',
       category: 'HVAC',
-      trustedSince: 2019
+      trustedSince: 2023
     },
     {
       name: 'Omega Elevators',
@@ -48,23 +48,23 @@ export class PartnersComponent {
       url: 'https://www.omega-elevators.com',
       description: 'India’s premier lift and elevator manufacturer offering custom vertical transport systems.',
       category: 'Elevators',
-      trustedSince: 2018
+      trustedSince: 2020
     },
-    {
-      name: 'NZHT',
-      logo: 'assets/partners/nzht.png',
-      url: 'https://www.nzht.in',
-      description: 'Specialists in mechanical, electrical, and plumbing installations and integration.',
-      category: 'MEP',
-      trustedSince: 2021
-    },
+    // {
+    //   name: 'NZHT',
+    //   logo: 'assets/partners/nzht.png',
+    //   url: 'https://www.nzht.in',
+    //   description: 'Specialists in mechanical, electrical, and plumbing installations and integration.',
+    //   category: 'MEP',
+    //   trustedSince: 2021
+    // },
     {
       name: 'Delight Kitchen Equipment',
       logo: 'assets/partners/delight.png',
       url: 'https://www.delightkitchenequipment.com',
       description: 'Commercial kitchen equipment innovators for hotels, restaurants, and cloud kitchens.',
       category: 'Kitchen Equipment',
-      trustedSince: 2020
+      trustedSince: 2024
     }
   ];
 
@@ -79,7 +79,7 @@ export class PartnersComponent {
     HVAC: 'Our HVAC partners help us deliver efficient, climate-conscious heating and cooling systems for residential and commercial spaces.',
     Elevators: 'We partner with industry leaders to provide modern, safe, and reliable lift and elevator solutions.',
     MEP: 'Our MEP partners support seamless mechanical, electrical, and plumbing system integrations.',
-    'Kitchen Equipment': 'We work with expert vendors to equip hotels, restaurants, and commercial kitchens with robust solutions.'
+    'Kitchen Equipment': 'We work with expert OEMs to equip hotels, restaurants, and commercial kitchens with robust solutions.'
   };
   
   
