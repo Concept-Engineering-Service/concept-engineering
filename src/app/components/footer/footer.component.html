@@ -32,8 +32,8 @@
         <div>
             <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
             <ul class="space-y-3 text-base">
-                <li><a routerLink="/" class="hover:text-[#ff6c6c] transition-colors">Home</a></li>
-                <li><a routerLink="/about" class="hover:text-[#ff6c6c] transition-colors">About</a></li>
+                <li><a (click)="navigateTo('/')" class="hover:text-[#ff6c6c] transition-colors">Home</a></li>
+                <li><a (click)="navigateTo('/about')" class="hover:text-[#ff6c6c] transition-colors">About</a></li>
                 <li><a href="#" class="hover:text-[#ff6c6c] transition-colors">Services</a></li>
                 <li><a href="#" class="hover:text-[#ff6c6c] transition-colors">Contact</a></li>
             </ul>

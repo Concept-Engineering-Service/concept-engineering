@@ -5,20 +5,21 @@
 
         <!-- Desktop Nav -->
         <nav class="hidden md:flex space-x-6">
-            <a routerLink="/" routerLinkActive="text-[#ff6c6c]" [routerLinkActiveOptions]="{ exact: true }"
-                class="hover:text-[#ff6c6c] transition-colors">
+            <a (click)="navigateTo('/')" routerLink="/" routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }" class="hover:text-[#ff6c6c] transition-colors">
                 Home
             </a>
 
-            <a routerLink="/about" routerLinkActive="text-[#ff6c6c]" class="hover:text-[#ff6c6c] transition-colors">
+            <a (click)="navigateTo('/about')" routerLink="/about" routerLinkActive="active-link"
+                class="hover:text-[#ff6c6c] transition-colors">
                 About
             </a>
 
-            <a routerLink="/services" routerLinkActive="text-[#ff6c6c]" class="hover:text-[#ff6c6c] transition-colors">
+            <a routerLink="/services" routerLinkActive="active-link" class="hover:text-[#ff6c6c] transition-colors">
                 Services
             </a>
 
-            <a routerLink="/contact" routerLinkActive="text-[#ff6c6c]" class="hover:text-[#ff6c6c] transition-colors">
+            <a routerLink="/contact" routerLinkActive="active-link" class="hover:text-[#ff6c6c] transition-colors">
                 Contact
             </a>
 
@@ -40,12 +41,24 @@
 
 
     <!-- Mobile Menu -->
-    <div *ngIf="isMenuOpen"
-        class="transition-all duration-300 ease-in-out md:hidden  md:hidden bg-[#072c53] px-6 pb-4 space-y-2">
-        <a routerLink="/" class="block text-white hover:text-red-400">Home</a>
-        <a routerLink="/about" class="block text-white hover:text-red-400">About</a>
-        <a href="#" class="block text-white hover:text-red-400">Services</a>
-        <a href="#" class="block text-white hover:text-red-400">Contact</a>
+    <div *ngIf="isMenuOpen" [ngClass]="{ 'menu-open': isMenuOpen, 'menu-close': !isMenuOpen }"
+        class="transition-all duration-300 ease-in-out md:hidden bg-[#072c53] px-6 pb-4 space-y-2">
+        <a (click)="navigateTo('/')" routerLink="/" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }" class="block text-white hover:text-red-400">
+            Home
+        </a>
+        <a (click)="navigateTo('/about')" routerLink="/about" routerLinkActive="active-link"
+            class="block text-white hover:text-red-400">
+            About
+        </a>
+        <a (click)="navigateTo('/services')" routerLink="/services" routerLinkActive="active-link"
+            class="block text-white hover:text-red-400">
+            Services
+        </a>
+        <a (click)="navigateTo('/contact')" routerLink="/contact" routerLinkActive="active-link"
+            class="block text-white hover:text-red-400">
+            Contact
+        </a>
         <button class="w-full mt-2 bg-[#ff6c6c] hover:bg-[#ff4c4c] px-4 py-2 rounded text-sm font-semibold">
             Contact Now
         </button>
